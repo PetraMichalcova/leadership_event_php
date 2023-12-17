@@ -358,6 +358,7 @@ include 'tickets.php';
                                     if (isset($_SESSION["ID"]) && $_SESSION["ID"] == $review->user_id) {
 
                                         echo       '<a href="#" data-toggle="modal" onclick="openModal(' . $review->review_id . ')" style="float:right"> <i class="bi bi-pencil-square" style="float:right"></i> </a>';
+                                        
                                         echo       '<form method="post" action="delete_review.php">';
                                         echo       '<input type="hidden" name="review_id" value="' . $review->review_id . '>"';
                                         echo       '   <a href="#" type="submit">';
@@ -526,51 +527,6 @@ include 'tickets.php';
                 </div>
             </div>
         </section>
-
-        <div class="modal" id="" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header" style="background-color: #273053">
-                        <h3 class="modal-title" style="color: white;">Adjust Review</h3>
-                        <div class="close" data-dismiss="modal" aria-label="Close">
-                            <i class="bi bi-x-circle" aria-hidden="true" style="color: white;font-size: 1.5rem; cursor: pointer"></i>
-                        </div>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-
-
-                            <div class="col-12">
-                                <form class="custom-form contact-form bg-white shadow-lg" action="sign_up_done.php" method="post" role="form">
-
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <input type="first_name" name="first_name" id="first_name" class="form-control" placeholder="First name" required="">
-                                        </div>
-
-                                        <div class="col-12">
-                                            <input type="last_name" name="last_name" id="last_name" class="form-control" placeholder="Last name" required="">
-                                        </div>
-
-                                        <div class="col-12">
-                                            <input type="email" name="mail" id="mail" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email" required="">
-                                        </div>
-
-                                        <div class="col-12">
-                                            <input type="password" name="pswd" id="pswd" class="form-control" placeholder="Password" required="">
-                                        </div>
-
-                                        <div class="col-12">
-                                            <button type="submit" class="form-control">Submit</button>
-                                        </div>
-
-                                    </div>
-                                </form>
-                            </div>
-
-                        </div>
-
-    </main>
 
     <footer class="site-footer">
         <div class="container">

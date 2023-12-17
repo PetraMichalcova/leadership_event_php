@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 }
 
 $ID = $_POST['hidden_id'];
-$text = $_POST['text'];
+$text = $conn -> real_escape_string($_POST['text']);
 date_default_timezone_set('Europe/Bratislava');
 $t = time();
 $date = date("Y-m-d H:i:s", $t);

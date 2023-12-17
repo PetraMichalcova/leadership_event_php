@@ -12,8 +12,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$mail = $_POST['mail'];
-$pswd = $_POST['pswd'];
+$mail = $conn -> real_escape_string($_POST['mail']);
+$pswd = $conn -> real_escape_string($_POST['pswd']);
 
 $sql = "SELECT ID, mail FROM speaker WHERE mail = '$mail' and password = '$pswd'";
 $result = $conn->query($sql);

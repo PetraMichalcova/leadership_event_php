@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 }
 
 $ID = $_SESSION['ID'];
-$text = $_POST['text'];
+$text = $conn -> real_escape_string($_POST['text']);
 $event_id = $_POST['event_id'];
 
 date_default_timezone_set('Europe/Bratislava');
